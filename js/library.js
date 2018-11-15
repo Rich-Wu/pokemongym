@@ -65,12 +65,12 @@ class Trainer {
     }
 }
 
-var red = new Trainer('Red');
-var ash = new Trainer('Ash Fetchum');
-var bruce = new Trainer('Bruce Leroy');
-var bald = new Trainer('Bald Eagle');
-
-red.setPokemon(37, 135, 235, red);
-ash.setPokemon(65, 18, 62, ash);
-bruce.setPokemon(106, 539, 143, bruce);
-bald.setPokemon(487, 150, 484, bald);
+// var red = new Trainer('Red');
+// var ash = new Trainer('Ash Fetchum');
+// var bruce = new Trainer('Bruce Leroy');
+// var bald = new Trainer('Bald Eagle');
+//
+// red.setPokemon(37, 135, 235, red);
+// ash.setPokemon(65, 18, 62, ash);
+// bruce.setPokemon(106, 539, 143, bruce);
+// bald.setPokemon(487, 150, 484, bald);

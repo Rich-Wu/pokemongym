@@ -1,3 +1,4 @@
+
 class Pokemon {
     constructor(name, hp, def, atk, spDef, spAtk, speed, idNum) {
       this.name = name;

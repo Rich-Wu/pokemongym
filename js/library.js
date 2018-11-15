@@ -10,14 +10,17 @@ class Pokemon {
       this.speed = speed;
       this.idNum = idNum;
       this.abilities = [];
+      this.flavorText = undefined;
     }
 }
 
 class Trainer {
-    constructor(name) {
+    constructor(name, picName, trainerText) {
       this.name = name;
       this.pokemon = [];
       this.ids = [];
+      this.picUrl = `img/${picName}.png`;
+      this.trainerText = trainerText;
     }
     all() {
       return this.pokemon;
@@ -36,7 +39,7 @@ class Trainer {
 
       for (var i = 0; i < this.ids.length; i++) {
 
-        var xhttp = new XMLHttpRequest();
+        let xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
           if (this.readyState == 4 && this.status == 200) {
             var data = JSON.parse(this.responseText);
@@ -53,8 +56,7 @@ class Trainer {
             for (var i = 0; i < data['abilities'].length; i++) {
               x.abilities.push(data['abilities'][i]['ability']['name']);
             }
-            // console.log(x);
-            trainerName.pokemon.push(x)
+            addFlavor(x, trainerName);
           }
         }
         xhttp.open('GET',  `https://fizal.me/pokeapi/api/v2/id/${this.ids[i]}.json`,);
@@ -65,6 +67,7 @@ class Trainer {
     }
 }
 
+
 // var red = new Trainer('Red');
 // var ash = new Trainer('Ash Fetchum');
 // var bruce = new Trainer('Bruce Leroy');
@@ -74,3 +77,24 @@ class Trainer {
 // ash.setPokemon(65, 18, 62, ash);
 // bruce.setPokemon(106, 539, 143, bruce);
 // bald.setPokemon(487, 150, 484, bald);
+
+
+
+
+function addFlavor(pokemon, trainerName) {
+  let xhttp = new XMLHttpRequest();
+  xhttp.open("GET", "https://pokeapi.co/api/v2/pokemon-species/" + pokemon.idNum + "/", true);
+  xhttp.send();
+  xhttp.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      data = JSON.parse(this.responseText);
+      for (entries in data['flavor_text_entries']) {
+        if (data['flavor_text_entries'][entries]['language']['name'] == 'en'){
+          pokemon.flavorText = data['flavor_text_entries'][entries]['flavor_text'];
+
+          }
+        }
+        trainerName.pokemon.push(pokemon);
+      }
+    }
+  };

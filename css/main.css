@@ -1,4 +1,9 @@
 body {
-  background-image: url("img/background.jpeg");
+  background-image: url("../img/background.jpeg");
+  background-size: cover;
+}
+
+.carousel-item {
+  background-image: url("../img/interfaceconsole.png");
   background-size: cover;
 }

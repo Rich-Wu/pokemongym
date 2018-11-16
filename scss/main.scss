@@ -1,0 +1,118 @@
+$flat-sepia: #e6b600;
+
+//Design Idea from Codepen.io by Kristen Zirkler
+section {
+  display: block;
+}
+
+.tile {
+  width: 100%;
+  height: 350px;
+  position: relative;
+  float: left;
+}
+.tile .front, .tile .back {
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 350px;
+  position: absolute;
+  overflow: hidden;
+  text-align: center;
+}
+.tile h3, .tile p, .tile a {
+  padding: 0 20px;
+}
+.tile img {
+  max-height: 130px;
+}
+.tile .front {
+  background: #fff;
+  transition: all .4s ease-in-out;
+  z-index: 2;
+}
+.tile .front h3 {
+  font-size: 2em;
+  color: white;
+  text-shadow: 0 0 5px #000;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+.tile .back {
+  background: $flat-sepia;
+  color: white;
+  z-index: 1;
+  padding-top: 50px;
+  height: 90%;
+}
+.tile .back h3 {
+  font-size: 1.5em;
+  color: white;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.tile .back a {
+  display: block;
+  font-size: 1.2em;
+  color: white;
+  border-top: 1px solid #ffcc00;
+  margin: 0 20px;
+  padding: .5em 0;
+}
+.tile:hover .front {
+  top: -200px;
+  opacity: 0;
+}
+//End of Derivative Code
+html {
+    height:100%;
+}
+
+body {
+  height: 100%;
+  background-image: radial-gradient(transparent, rgba(0, 0, 0, 0.7), black), url("../img/background.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  color: black;
+}
+
+.carousel-item {
+  background-image: url("../img/coloredpanel.png");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.carousel img {
+  min-height: 50%;
+  max-height: 110%;
+  opacity: 0.9;
+  position: absolute;
+  right: 10%;
+}
+
+#contentBox {
+  display: flex;
+  align-items: center;
+}
+
+.carouselWrap {
+  height: 50vh;
+}
+
+nav {
+  margin-bottom: 2%;
+}
+
+#trainerRow {
+  margin-bottom: 1%;
+}
+
+.carousel-inner {
+  overflow: visible;
+}

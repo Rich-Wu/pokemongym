@@ -36,7 +36,7 @@ section {
   max-height: 130px;
 }
 .tile .front {
-  background: $dark-sepia;
+  background: $orange-sepia;
   transition: all .4s ease-in-out;
   z-index: 2;
 }
@@ -48,11 +48,12 @@ section {
   margin-bottom: 1.5em;
 }
 .tile .back {
-  background: $flat-sepia;
+  background: $light-sepia;
   color: $offwhite;
   z-index: 1;
   padding-top: 50px;
-  height: 90%;
+  height: 100%;
+  text-shadow: 2px 2px 1px black;
 }
 .tile .back h3 {
   font-size: 1.5em;
@@ -121,4 +122,14 @@ nav {
 
 .carousel-inner {
   overflow: visible;
+}
+
+#cards {
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  li {
+    padding: 5%;
+  }
 }

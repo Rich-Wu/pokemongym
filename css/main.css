@@ -26,7 +26,7 @@ section {
   max-height: 130px; }
 
 .tile .front {
-  background: #ffab00;
+  background: #ffb300;
   transition: all .4s ease-in-out;
   z-index: 2; }
 
@@ -38,11 +38,12 @@ section {
   margin-bottom: 1.5em; }
 
 .tile .back {
-  background: #e6b600;
+  background: #ffe082;
   color: #fff8e1;
   z-index: 1;
   padding-top: 50px;
-  height: 90%; }
+  height: 100%;
+  text-shadow: 2px 2px 1px black; }
 
 .tile .back h3 {
   font-size: 1.5em;
@@ -102,5 +103,11 @@ nav {
 
 .carousel-inner {
   overflow: visible; }
+
+#cards ul {
+  list-style-type: none;
+  padding: 0; }
+#cards li {
+  padding: 5%; }
 
 /*# sourceMappingURL=main.css.map */

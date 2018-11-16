@@ -6,5 +6,7 @@ body {
 
 .carousel-item {
   background-image: url("../img/interfaceconsole.png");
-  background-size: cover;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
 }

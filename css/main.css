@@ -7,6 +7,12 @@ section {
   position: relative;
   float: left; }
 
+  #logo1{
+    height:100px;
+    height:100x;
+    justify-items: center;
+  
+  }
 .tile .front, .tile .back {
   display: block;
   top: 0;

@@ -163,21 +163,10 @@
       $("#trainerCarousel").on('slid.bs.carousel', function () {
         console.log('something is sliding');
         let trainer = document.getElementsByClassName('active')[0].id;
-        let cards = $('.tile');
-        console.log(trainer);
-        if (trainer == "red") {
-          console.log('this is red');
-        } else
-        if (trainer == "bald") {
-          console.log('this is bald');
-        } else
-        if (trainer == "ash") {
-          console.log('this is ash');
-        } else
-        if (trainer == "bruce") {
-          console.log('this is bruce');
-        }
-      })
+        // let cards = document.getElementsByClassName('.tile');
+        setTimeout(function() {
+          setScreen(trainer);
+        }, 600);
     </script>
   </body>
 </html>

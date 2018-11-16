@@ -108,34 +108,50 @@ $('#trainerCarousel').on('slide.bs.carousel', function () {
 console.log('something is sliding');
 })
 
-function setScreen(trainer) {
+var trainers = ['red', 'bald', 'ash', 'bruce'];
+
+function setScreen() {
     var pokemon = document.querySelectorAll('.pokemon');
     var flavor = document.querySelectorAll('.flavortext');
     var hp = document.querySelectorAll('.hp');
     var def = document.querySelectorAll('.def');
     var abilities = document.querySelectorAll('.abilities');
-
+    let trainerNum = 0;
+    if (document.getElementsByClassName('active')[0].id == 'red') {
+      trainerNum = 0;
+    } else
+    if (document.getElementsByClassName('active')[0].id == 'bald') {
+      trainerNum = 1;
+      console.log(trainerNum);
+    } else
+    if (document.getElementsByClassName('active')[0].id == 'ash') {
+      trainerNum = 2;
+    } else
+    if (document.getElementsByClassName('active')[0].id == 'bruce') {
+      trainerNum = 3;
+    }
+    console.log(trainers);
     for (var i = 0; i < pokemon.length; i++) {
-      pokemon[i].innerHTML = `${trainer.pokemon[i].name}`;
+      pokemon[i].innerHTML = `${trainers[trainerNum].pokemon[i].name}`;
     }
 
     for (var i = 0; i < flavor.length; i++) {
-      flavor[i].innerHTML = `${trainer.pokemon[i].flavorText}`;
+      flavor[i].innerHTML = `${trainers[trainerNum].pokemon[i].flavorText}`;
     }
 
     for (var i = 0; i < hp.length; i++) {
-      hp[i].innerHTML = `${trainer.pokemon[i].hp}`
+      hp[i].innerHTML = `${trainers[trainerNum].pokemon[i].hp}`
     }
 
     for (var i = 0; i < def.length; i++) {
-      def[i].innerHTML = `${trainer.pokemon[i].def}`
+      def[i].innerHTML = `${trainers[trainerNum].pokemon[i].def}`
     }
 
     for (var i = 0; i < atk.length; i++) {
-      atk[i].innerHTML = `${trainer.pokemon[i].atk}`
+      atk[i].innerHTML = `${trainers[trainerNum].pokemon[i].atk}`
     }
 
     for (var i = 0; i < abilities.length; i++) {
-      abilities[i].innerHTML = `${trainer.pokemon[i].abilties}`
+      abilities[i].innerHTML = `${trainers[trainerNum].pokemon[i].abilties}`
     }
 }

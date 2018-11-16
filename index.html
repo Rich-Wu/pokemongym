@@ -157,9 +157,8 @@
       $("#trainerCarousel").on('slid.bs.carousel', function () {
         console.log('something is sliding');
         let trainer = document.getElementsByClassName('active')[0].id;
-        // let cards = document.getElementsByClassName('.tile');
         setTimeout(function() {
-          setScreen(trainer);
+          setScreen();
         }, 600);
       });
     </script>

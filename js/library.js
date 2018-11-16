@@ -19,7 +19,7 @@ class Trainer {
       this.name = name;
       this.pokemon = [];
       this.ids = [];
-      this.picUrl = `img/${picName}.png`;
+      this.picName = `img/${picName}.png`;
       this.trainerText = trainerText;
     }
     all() {
@@ -87,5 +87,19 @@ function addFlavor(pokemon, trainerName) {
   };
 
   function setScreen(trainer) {
-    var
+    var trainerPic = document.getElementById('trainer');
+    var pokemonImg1 = document.getElementById('pokeimg1');
+    var pokemonImg2 = document.getElementById('pokeimg2');
+    var pokemonImg3 = document.getElementById('pokeimg3');
+    var flavor1 = document.getElementById('pokeflavor1');
+    var flavor2 = document.getElementById('pokeflavor2');
+    var flavor3 = document.getElementById('pokeflavor3');
+    // var trainerPic = document.getElementById('trainer');
+    // var trainerPic = document.getElementById('trainer');
+    // var trainerPic = document.getElementById('trainer');
+
+    trainerPic.setAttribute('src', `${trainer.picName}`);
+    flavor1.innerHTML = `${trainer.pokemon[0].flavorText}`;
+    flavor2.innerHTML = `${trainer.pokemon[1].flavorText}`;
+    flavor3.innerHTML = `${trainer.pokemon[2].flavorText}`;
   }

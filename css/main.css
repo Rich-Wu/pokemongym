@@ -1,4 +1,7 @@
 //Design Idea from Codepen.io by Kristen Zirkler
+section {
+  display: block;
+}
 .tile {
   width: 250px;
   height: 350px;
@@ -86,9 +89,15 @@ img {
   min-height: 50%;
   max-height: 110%;
   opacity: 0.9;
+  position: absolute;
+  right: 10%;
 }
 
 #contentBox {
   display: flex;
   align-items: center;
+}
+
+.carouselWrap {
+  height: 50vh;
 }

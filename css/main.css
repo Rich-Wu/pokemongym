@@ -3,7 +3,7 @@ section {
   display: block;
 }
 .tile {
-  width: 250px;
+  width: 100%;
   height: 350px;
   margin: 2em;
   position: relative;
@@ -15,7 +15,7 @@ section {
   bottom: 0;
   left: 0;
   right: 0;
-  width: 250px;
+  width: 100%;
   height: 350px;
   position: absolute;
   overflow: hidden;
@@ -36,7 +36,7 @@ section {
   font-size: 2em;
   color: white;
   text-shadow: 0 0 5px #000;
-  margin-top: -1.5em;
+  margin-top: 1.5em;
   margin-bottom: 1.5em;
 }
 .tile .back {
@@ -44,7 +44,7 @@ section {
   color: white;
   z-index: 1;
   padding-top: 50px;
-  height: 300px;
+  height: 90%;
 }
 .tile .back h3 {
   font-size: 1.5em;

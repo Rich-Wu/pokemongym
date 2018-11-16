@@ -86,6 +86,6 @@ function addFlavor(pokemon, trainerName) {
     }
   };
 
-  function setScreen(trainer) {
-    var
-  }
+  // function setScreen(trainer) {
+  //   var
+  // }

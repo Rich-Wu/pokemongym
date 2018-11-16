@@ -13,6 +13,15 @@ class Pokemon {
       this.abilities = [];
       this.flavorText = undefined;
     }
+    getAbilities() {
+      let abilities = capitalize(this.abilities[0]);
+
+      for (let i = 1; i < this.abilities.length; i++) {
+        abilities = abilities + ", " + capitalize(this.abilities[i]);
+      }
+      console.log(abilities);
+      return abilities;
+    }
 }
 
 class Trainer {
@@ -88,7 +97,7 @@ function addFlavor(pokemon, trainerName) {
 
 function changeTrainer() {
   // console.log('something happened');
-  $('#trainerCarousel').carousel(document.getElementsByTagName('select')[0].options.selectedIndex);
+  $('#trainerCarousel').carousel(document.getElementsByTagName('select')[0].options.selectedIndex-1);
 }
 
 function threeDigits(num) {
@@ -113,13 +122,14 @@ function setScreen() {
     var pokemon = document.querySelectorAll('.pokemon');
     var flavor = document.querySelectorAll('.flavortext');
     var hp = document.querySelectorAll('.hp');
+    var atk = document.querySelectorAll('.atk');
     var def = document.querySelectorAll('.def');
     var abilities = document.querySelectorAll('.abilities');
     let trainerNum = 0;
     if (document.getElementsByClassName('active')[0].id == 'red') {
 
         for (var i = 0; i < pokemon.length; i++) {
-          pokemon[i].innerHTML = red.pokemon[i].name;
+          pokemon[i].innerHTML = capitalize(red.pokemon[i].name);
         }
 
         for (var i = 0; i < flavor.length; i++) {
@@ -135,18 +145,18 @@ function setScreen() {
         }
 
         for (var i = 0; i < atk.length; i++) {
-          atk[i].innerHTML = ` ATK: ${red.pokemon[i].atk}`;
+          atk[i].innerHTML = `ATK: ${red.pokemon[i].atk}`;
         }
 
         for (var i = 0; i < abilities.length; i++) {
-          abilities[i].innerHTML = `Abilities: ${red.pokemon[i].abilties}`;
+          abilities[i].innerHTML = `Abilities: ${red.pokemon[i].getAbilities()}`;
         }
     } else
 
     if (document.getElementsByClassName('active')[0].id == 'bald') {
 
         for (var i = 0; i < pokemon.length; i++) {
-          pokemon[i].innerHTML = bald.pokemon[i].name;
+          pokemon[i].innerHTML = capitalize(bald.pokemon[i].name);
         }
 
         for (var i = 0; i < flavor.length; i++) {
@@ -166,14 +176,14 @@ function setScreen() {
         }
 
         for (var i = 0; i < abilities.length; i++) {
-          abilities[i].innerHTML = `Abilities: ${bald.pokemon[i].abilties}`;
+          abilities[i].innerHTML = `Abilities: ${bald.pokemon[i].getAbilities()}`;
         }
     } else
 
     if (document.getElementsByClassName('active')[0].id == 'ash') {
 
         for (var i = 0; i < pokemon.length; i++) {
-          pokemon[i].innerHTML = ash.pokemon[i].name;
+          pokemon[i].innerHTML = capitalize(ash.pokemon[i].name);
         }
 
         for (var i = 0; i < flavor.length; i++) {
@@ -193,14 +203,14 @@ function setScreen() {
         }
 
         for (var i = 0; i < abilities.length; i++) {
-          abilities[i].innerHTML = `Abilities: ${ash.pokemon[i].abilties}`;
+          abilities[i].innerHTML = `Abilities: ${ash.pokemon[i].getAbilities()}`;
         }
     } else
 
     if (document.getElementsByClassName('active')[0].id == 'bruce') {
 
         for (var i = 0; i < pokemon.length; i++) {
-          pokemon[i].innerHTML = bruce.pokemon[i].name;
+          pokemon[i].innerHTML = capitalize(bruce.pokemon[i].name);
         }
 
 
@@ -224,8 +234,8 @@ function setScreen() {
         }
 
         for (var i = 0; i < abilities.length; i++) {
-          abilities[i].innerHTML = `Abilities: ${bruce.pokemon[i].abilties}`;
+          abilities[i].innerHTML = `Abilities: ${bruce.pokemon[i].getAbilities()}`;
         }
-}
-}
+      }
+    }
 }

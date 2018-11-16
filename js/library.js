@@ -107,3 +107,35 @@ function capitalize(string) {
 $('#trainerCarousel').on('slide.bs.carousel', function () {
 console.log('something is sliding');
 })
+
+function setScreen(trainer) {
+    var pokemon = document.querySelectorAll('.pokemon');
+    var flavor = document.querySelectorAll('.flavortext');
+    var hp = document.querySelectorAll('.hp');
+    var def = document.querySelectorAll('.def');
+    var abilities = document.querySelectorAll('.abilities');
+
+    for (var i = 0; i < pokemon.length; i++) {
+      pokemon[i].innerHTML = `${trainer.pokemon[i].name}`;
+    }
+
+    for (var i = 0; i < flavor.length; i++) {
+      flavor[i].innerHTML = `${trainer.pokemon[i].flavorText}`;
+    }
+
+    for (var i = 0; i < hp.length; i++) {
+      hp[i].innerHTML = `${trainer.pokemon[i].hp}`
+    }
+
+    for (var i = 0; i < def.length; i++) {
+      def[i].innerHTML = `${trainer.pokemon[i].def}`
+    }
+
+    for (var i = 0; i < atk.length; i++) {
+      atk[i].innerHTML = `${trainer.pokemon[i].atk}`
+    }
+
+    for (var i = 0; i < abilities.length; i++) {
+      abilities[i].innerHTML = `${trainer.pokemon[i].abilties}`
+    }
+}

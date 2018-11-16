@@ -42,28 +42,28 @@ section {
 }
 .tile .front h3 {
   font-size: 2em;
-  color: white;
+  color: $offwhite;
   text-shadow: 0 0 5px #000;
   margin-top: 1.5em;
   margin-bottom: 1.5em;
 }
 .tile .back {
   background: $flat-sepia;
-  color: white;
+  color: $offwhite;
   z-index: 1;
   padding-top: 50px;
   height: 90%;
 }
 .tile .back h3 {
   font-size: 1.5em;
-  color: white;
+  color: $offwhite;
   margin-top: 1em;
   margin-bottom: 1em;
 }
 .tile .back a {
   display: block;
   font-size: 1.2em;
-  color: white;
+  color: $offwhite;
   border-top: 1px solid #ffcc00;
   margin: 0 20px;
   padding: .5em 0;
@@ -74,7 +74,7 @@ section {
 }
 //End of Derivative Code
 html {
-    height:100%;
+  height:100%;
 }
 
 body {

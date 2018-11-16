@@ -120,6 +120,7 @@ console.log('something is sliding');
 
 function setScreen() {
     var pokemon = document.querySelectorAll('.pokemon');
+    var picture = document.querySelectorAll('.picture');
     var flavor = document.querySelectorAll('.flavortext');
     var hp = document.querySelectorAll('.hp');
     var atk = document.querySelectorAll('.atk');
@@ -134,6 +135,10 @@ function setScreen() {
 
         for (var i = 0; i < flavor.length; i++) {
           flavor[i].innerHTML = red.pokemon[i].flavorText;
+        }
+
+        for (var i = 0; i < picture.length; i++) {
+          picture[i].src = red.pokemon[i].picture;
         }
 
         for (var i = 0; i < hp.length; i++) {
@@ -163,6 +168,10 @@ function setScreen() {
           flavor[i].innerHTML = bald.pokemon[i].flavorText;
         }
 
+        for (var i = 0; i < picture.length; i++) {
+          picture[i].src = bald.pokemon[i].picture;
+        }
+
         for (var i = 0; i < hp.length; i++) {
           hp[i].innerHTML = `HP: ${bald.pokemon[i].hp}`;
         }
@@ -190,6 +199,10 @@ function setScreen() {
           flavor[i].innerHTML = ash.pokemon[i].flavorText;
         }
 
+        for (var i = 0; i < picture.length; i++) {
+          picture[i].src = ash.pokemon[i].picture;
+        }
+
         for (var i = 0; i < hp.length; i++) {
           hp[i].innerHTML = `HP: ${ash.pokemon[i].hp}`;
         }
@@ -213,13 +226,14 @@ function setScreen() {
           pokemon[i].innerHTML = capitalize(bruce.pokemon[i].name);
         }
 
-
         for (var i = 0; i < flavor.length; i++) {
           flavor[i].innerHTML = bruce.pokemon[i].flavorText;
         }
 
-        for (var i = 0; i < hp.length; i++) {
-
+        for (var i = 0; i < picture.length; i++) {
+          console.log(bruce.pokemon[i].picture + bruce.pokemon[i]);
+          picture[i].src = bruce.pokemon[i].picture;
+        }
 
         for (var i = 0; i < hp.length; i++) {
           hp[i].innerHTML = `HP: ${bruce.pokemon[i].hp}`;
@@ -236,6 +250,5 @@ function setScreen() {
         for (var i = 0; i < abilities.length; i++) {
           abilities[i].innerHTML = `Abilities: ${bruce.pokemon[i].getAbilities()}`;
         }
-      }
     }
 }

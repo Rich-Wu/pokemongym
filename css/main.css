@@ -26,7 +26,7 @@ section {
   max-height: 130px; }
 
 .tile .front {
-  background: #fff;
+  background: #ffe082;
   transition: all .4s ease-in-out;
   z-index: 2; }
 

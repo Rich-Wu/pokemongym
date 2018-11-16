@@ -1,4 +1,10 @@
+$offwhite: #fff8e1;
+$light-sepia: #ffe082;
+$amber: #ffc107;
+$orange-sepia: #ffb300;
+$dark-sepia: #ffab00;
 $flat-sepia: #e6b600;
+
 
 //Design Idea from Codepen.io by Kristen Zirkler
 section {
@@ -30,7 +36,7 @@ section {
   max-height: 130px;
 }
 .tile .front {
-  background: #fff;
+  background: $light-sepia;
   transition: all .4s ease-in-out;
   z-index: 2;
 }

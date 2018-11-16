@@ -1,88 +1,139 @@
-$accent: #ffcc00;
-//$accent: #52be7f;
-$cardBackground: darken($accent,5);
-//$cardBackground: #333;
+$offwhite: #fff8e1;
+$light-sepia: #ffe082;
+$amber: #ffc107;
+$orange-sepia: #ffb300;
+$dark-sepia: #ffab00;
+$flat-sepia: #e6b600;
 
-section, footer, nav {
+#logo {
+    width:50px;
+    height:50px;
+
+}
+//Design Idea from Codepen.io by Kristen Zirkler
+section {
   display: block;
 }
-body {
-  -webkit-text-size-adjust: none;
-  background: $accent;
-  background-image: radial-gradient(transparent, rgba(0, 0, 0, 0.7), black), url("img/img/3209806-tmnt.jpeg");
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 1.4em;
-  padding: 3em;
-}
-a {
-  text-decoration: none;
-  color: #333;
-}
-figure {
-  margin: 0;
-}
-// Tile Classes 
+
 .tile {
-  width: 250px;
+  width: 100%;
   height: 350px;
-  margin: 2em;
   position: relative;
   float: left;
-  .front, .back {
-    display: block;
-    top: 0; bottom: 0;
-    left: 0; right: 0;
-    width: 250px;
-    height: 350px;
-    position: absolute;
-    overflow: hidden;
-    text-align: center;
+}
+.tile .front, .tile .back {
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 350px;
+  position: absolute;
+  overflow: hidden;
+  text-align: center;
+}
+.tile h3, .tile p, .tile a {
+  padding: 0 20px;
+}
+.tile img {
+  max-height: 130px;
+}
+.tile .front {
+  background: $orange-sepia;
+  transition: all .4s ease-in-out;
+  z-index: 2;
+}
+.tile .front h3 {
+  font-size: 2em;
+  color: $offwhite;
+  text-shadow: 0 0 5px #000;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+.tile .back {
+  background: $light-sepia;
+  color: $offwhite;
+  z-index: 1;
+  padding-top: 50px;
+  height: 100%;
+  text-shadow: 2px 2px 1px black;
+}
+.tile .back h3 {
+  font-size: 1.5em;
+  color: $offwhite;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.tile .back a {
+  display: block;
+  font-size: 1.2em;
+  color: $offwhite;
+  border-top: 1px solid #ffcc00;
+  margin: 0 20px;
+  padding: .5em 0;
+}
+.tile:hover .front {
+  top: -200px;
+  opacity: 0;
+}
+//End of Derivative Code
+html {
+  height:100%;
+}
+
+body {
+  height: 100%;
+  background-image: radial-gradient(transparent, rgba(0, 0, 0, 0.7), black), url("../img/background.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  color: black;
+}
+
+.carousel-item {
+  background-image: url("../img/coloredpanel.png");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.carousel img {
+  min-height: 50%;
+  max-height: 110%;
+  opacity: 0.9;
+  position: absolute;
+  right: 10%;
+}
+
+#contentBox {
+  display: flex;
+  align-items: center;
+}
+
+.carouselWrap {
+  height: 50vh;
+}
+
+nav {
+  margin-bottom: 1%;
+}
+
+#trainerRow {
+  margin-bottom: 2%;
+}
+
+.carousel-inner {
+  overflow: visible;
+}
+
+#cards {
+  ul {
+    list-style-type: none;
+    padding: 0;
   }
-  h3, p, a {
-    padding: 0 20px;
-  }
-  img {
-    max-height: 130px;
-  }
-  .front {
-    background: #fff;
-    transition: all .5s ease-in-out;
-    z-index: 2;
-    h3 {
-      font-size: 2em;
-      color: white;
-      text-shadow: 0 0 5px #000;
-      margin-top: -1.5em;
-      margin-bottom: 1.5em;
-    }
-  }
-  .back {
-    background: $cardBackground;
-    color: white;
-    z-index: 1;
-    padding-top: 50px;
-    height: 300px;
-    h3 {
-      font-size: 1.5em;
-      color: white;
-      margin-top: 1em;
-      margin-bottom: 1em;
-    }
-    a {
-      display: block;
-      font-size: 1.2em;
-      color: white;
-      border-top: 1px solid lighten($cardBackground,5);
-      margin: 0 20px;
-      padding: .5em 0;
-    }
-  }
-  &:hover {
-    .front {
-      top: -300px;
-      transform: rotate(2deg);
-    }
+  li {
+    padding: 5%;
   }
 }

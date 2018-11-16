@@ -108,7 +108,6 @@ $('#trainerCarousel').on('slide.bs.carousel', function () {
 console.log('something is sliding');
 })
 
-var trainers = [red, 'bald', ash, bruce];
 
 function setScreen() {
     var pokemon = document.querySelectorAll('.pokemon');
@@ -204,9 +203,13 @@ function setScreen() {
           pokemon[i].innerHTML = bruce.pokemon[i].name;
         }
 
+
         for (var i = 0; i < flavor.length; i++) {
           flavor[i].innerHTML = bruce.pokemon[i].flavorText;
         }
+
+        for (var i = 0; i < hp.length; i++) {
+
 
         for (var i = 0; i < hp.length; i++) {
           hp[i].innerHTML = `HP: ${bruce.pokemon[i].hp}`;
@@ -223,5 +226,6 @@ function setScreen() {
         for (var i = 0; i < abilities.length; i++) {
           abilities[i].innerHTML = `Abilities: ${bruce.pokemon[i].abilties}`;
         }
-    }
+}
+}
 }

@@ -4,7 +4,7 @@ section, footer, nav {
 body {
   -webkit-text-size-adjust: none;
   background: #ffcc00;
-  background-image: radial-gradient(transparent, rgba(0, 0, 0, 0.7), black), url("img/3209806-tmnt.jpeg");
+  background-image: radial-gradient(transparent, rgba(0, 0, 0, 0.7), black), url("/img/3209806-tmnt.jpeg");
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
   font-size: 14px;

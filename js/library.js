@@ -103,7 +103,3 @@ function threeDigits(num) {
 function capitalize(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
-
-$('#trainerCarousel').on('slide.bs.carousel', function () {
-console.log('something is sliding');
-})

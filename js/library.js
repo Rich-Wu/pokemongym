@@ -78,7 +78,6 @@ function addFlavor(pokemon, trainerName) {
       for (entries in data['flavor_text_entries']) {
         if (data['flavor_text_entries'][entries]['language']['name'] == 'en'){
           pokemon.flavorText = data['flavor_text_entries'][entries]['flavor_text'];
-
           }
         }
         trainerName.pokemon.push(pokemon);

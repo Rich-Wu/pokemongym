@@ -12,11 +12,11 @@
         <form>
           <div class="form-inline">
             <label for="trainerSelect">Select a trainer: </label>
-            <select class="form-control" id="trainerSelect">
-              <option>Red</option>
-              <option>Bald Eagle</option>
-              <option>Ash Fetchum</option>
-              <option>Bruce Leroy</option>
+            <select onchange = 'changeTrainer()'  class="form-control" id="trainerSelect">
+              <option value = "0">Red</option>
+              <option value = "1">Bald Eagle</option>
+              <option value = "2">Ash Fetchum</option>
+              <option value = "3">Bruce Leroy</option>
             </select>
           </div>
         </form>
@@ -153,7 +153,6 @@
       var ash = new Trainer('Ash Fetchum','ash','I am a trainer!');
       var bruce = new Trainer('Bruce Leroy','bruce','I am a trainer!');
       var bald = new Trainer('Bald Eagle','bald','I am a trainer!');
-
       red.setPokemon(37, 135, 235, red);
       ash.setPokemon(65, 18, 62, ash);
       bruce.setPokemon(106, 539, 143, bruce);

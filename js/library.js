@@ -86,6 +86,7 @@ function addFlavor(pokemon, trainerName) {
     }
   };
 
-  // function setScreen(trainer) {
-  //   var
-  // }
+function changeTrainer() {
+  // console.log('something happened');
+  $('#trainerCarousel').carousel(document.getElementsByTagName('select')[0].options.selectedIndex);
+}

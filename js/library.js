@@ -9,6 +9,7 @@ class Pokemon {
       this.spAtk = spAtk;
       this.speed = speed;
       this.idNum = idNum;
+      this.picture = "https://assets.pokemon.com/assets/cms2/img/pokedex/full/" + threeDigits(idNum) + ".png";
       this.abilities = [];
       this.flavorText = undefined;
     }
@@ -78,7 +79,6 @@ function addFlavor(pokemon, trainerName) {
       for (entries in data['flavor_text_entries']) {
         if (data['flavor_text_entries'][entries]['language']['name'] == 'en'){
           pokemon.flavorText = data['flavor_text_entries'][entries]['flavor_text'];
-
           }
         }
         trainerName.pokemon.push(pokemon);
@@ -90,3 +90,20 @@ function changeTrainer() {
   // console.log('something happened');
   $('#trainerCarousel').carousel(document.getElementsByTagName('select')[0].options.selectedIndex);
 }
+
+function threeDigits(num) {
+  if (num.toString().length == 3) {
+    return num;
+  } else {
+    num = "0" + num.toString();
+    return threeDigits(num);
+  }
+}
+
+function capitalize(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+$('#trainerCarousel').on('slide.bs.carousel', function () {
+console.log('something is sliding');
+})

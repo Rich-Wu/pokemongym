@@ -7,7 +7,25 @@
     <title>Sepia City Gym Explorer</title>
   </head>
   <body>
-    <div class = "row">
+  <nav class="navbar navbar-light bg-light">
+    <form>
+      <div class="form-inline">
+        <label for="trainerSelect">Select a trainer: </label>
+        <select onchange = 'changeTrainer()'  class="form-control" id="trainerSelect">
+          <option value = "0">Red</option>
+          <option value = "1">Bald Eagle</option>
+          <option value = "2">Ash Fetchum</option>
+          <option value = "3">Bruce Leroy</option>
+        </select>
+      </div>
+    </form>
+    <img src = "img/logo.png" alt = "logo">
+    <form class="form-inline">
+      <input class="form-control mr-sm-2" type="search" placeholder="Enter a Pokemon name..." aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </nav>
+    <!-- <div class = "row">
       <div class = "col">
         <form>
           <div class="form-inline">
@@ -27,17 +45,23 @@
       <div class = "col">
         <form>Search Pokemon</form>
       </div>
-    </div>
-    <div class = "row">
+    </div> -->
+    <div class = "row" id = "trainerRow">
       <div class = "container">
         <div class="carousel slide" data-ride="carousel" data-interval = "false" id="trainerCarousel">
+          <ol class="carousel-indicators">
+            <li data-target="#trainerCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#trainerCarousel" data-slide-to="1"></li>
+            <li data-target="#trainerCarousel" data-slide-to="2"></li>
+            <li data-target="#trainerCarousel" data-slide-to="3"></li>
+          </ol>
           <div class = "carousel-inner">
             <div class = "carousel-item active">
               <div class = "carouselWrap">
                 <img class = "trainer" src = "img/red.png" alt = "trainer 1 image"/>
                 <div class="carousel-caption d-none d-md-block">
-                  <h2 id = "trainer1name">Trainer 1's Name</h2>
-                  <p id = "trainer1text">Trainer 1 is a dope pokemon trainer with dope pokemon and doper moves</p>
+                  <h2 id = "trainer1name">Red</h2>
+                  <p id = "trainer1text">Red especially loves fighting against trainers that are stronger than he is</p>
                 </div>
               </div>
             </div>
@@ -80,21 +104,20 @@
         </div>
       </div>
     </div>
-    <div class="container">
+    <div class="container" id = "cards">
       <div class = "row">
         <div class = "col-4">
           <div class="tile">
             <div class="front">
               <div class="contents">
-                <img src="placeholder.jpg"/>
-                <h3>Pokemon Name</h3>
-                <p>Pokemon Flavor Text</p>
+                <img src=""/>
+                <h3>Vulpix</h3>
+                <p>Breathes Fire</p>
                 <br>
-                <a href="#">View Jobs</a>
               </div>
             </div>
             <div class="back">
-              <h3>Pokemon Name</h3>
+              <h3>Fire Type</h3>
               <p>HP:</p>
               <p>ATK:</p>
               <p>DEF:</p>
@@ -107,14 +130,13 @@
             <div class="front">
               <div class="contents">
                 <img src="placeholder.jpg"/>
-                <h3>Pokemon Name</h3>
-                <p>Pokemon Flavor Text</p>
+                <h3>Smeargle</h3>
+                <p>Brush on his tail</p>
                 <br>
-                <a href="#">View Jobs</a>
               </div>
             </div>
             <div class="back">
-              <h3>Pokemon Name</h3>
+              <h3>Normal Type</h3>
               <p>HP:</p>
               <p>ATK:</p>
               <p>DEF:</p>
@@ -127,14 +149,13 @@
             <div class="front">
               <div class="contents">
                 <img src="placeholder.jpg"/>
-                <h3>Pokemon Name</h3>
-                <p>Pokemon Flavor Text</p>
+                <h3>Jolteon</h3>
+                <p>Bzzzzzz</p>
                 <br>
-                <a href="#">View Jobs</a>
               </div>
             </div>
             <div class="back">
-              <h3>Pokemon Name</h3>
+              <h3>Electric Type</h3>
               <p>HP:</p>
               <p>ATK:</p>
               <p>DEF:</p>

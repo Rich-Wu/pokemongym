@@ -108,7 +108,7 @@ $('#trainerCarousel').on('slide.bs.carousel', function () {
 console.log('something is sliding');
 })
 
-var trainers = ['red', 'bald', 'ash', 'bruce'];
+var trainers = [red, 'bald', ash, bruce];
 
 function setScreen() {
     var pokemon = document.querySelectorAll('.pokemon');
@@ -118,40 +118,110 @@ function setScreen() {
     var abilities = document.querySelectorAll('.abilities');
     let trainerNum = 0;
     if (document.getElementsByClassName('active')[0].id == 'red') {
-      trainerNum = 0;
+
+        for (var i = 0; i < pokemon.length; i++) {
+          pokemon[i].innerHTML = red.pokemon[i].name;
+        }
+
+        for (var i = 0; i < flavor.length; i++) {
+          flavor[i].innerHTML = red.pokemon[i].flavorText;
+        }
+
+        for (var i = 0; i < hp.length; i++) {
+          hp[i].innerHTML = `HP: ${red.pokemon[i].hp}`;
+        }
+
+        for (var i = 0; i < def.length; i++) {
+          def[i].innerHTML = `DEF: ${red.pokemon[i].def}`;
+        }
+
+        for (var i = 0; i < atk.length; i++) {
+          atk[i].innerHTML = ` ATK: ${red.pokemon[i].atk}`;
+        }
+
+        for (var i = 0; i < abilities.length; i++) {
+          abilities[i].innerHTML = `Abilities: ${red.pokemon[i].abilties}`;
+        }
     } else
+
     if (document.getElementsByClassName('active')[0].id == 'bald') {
-      trainerNum = 1;
-      console.log(trainerNum);
+
+        for (var i = 0; i < pokemon.length; i++) {
+          pokemon[i].innerHTML = bald.pokemon[i].name;
+        }
+
+        for (var i = 0; i < flavor.length; i++) {
+          flavor[i].innerHTML = bald.pokemon[i].flavorText;
+        }
+
+        for (var i = 0; i < hp.length; i++) {
+          hp[i].innerHTML = `HP: ${bald.pokemon[i].hp}`;
+        }
+
+        for (var i = 0; i < def.length; i++) {
+          def[i].innerHTML = `DEF: ${bald.pokemon[i].def}`;
+        }
+
+        for (var i = 0; i < atk.length; i++) {
+          atk[i].innerHTML = ` ATK: ${bald.pokemon[i].atk}`;
+        }
+
+        for (var i = 0; i < abilities.length; i++) {
+          abilities[i].innerHTML = `Abilities: ${bald.pokemon[i].abilties}`;
+        }
     } else
+
     if (document.getElementsByClassName('active')[0].id == 'ash') {
-      trainerNum = 2;
+
+        for (var i = 0; i < pokemon.length; i++) {
+          pokemon[i].innerHTML = ash.pokemon[i].name;
+        }
+
+        for (var i = 0; i < flavor.length; i++) {
+          flavor[i].innerHTML = ash.pokemon[i].flavorText;
+        }
+
+        for (var i = 0; i < hp.length; i++) {
+          hp[i].innerHTML = `HP: ${ash.pokemon[i].hp}`;
+        }
+
+        for (var i = 0; i < def.length; i++) {
+          def[i].innerHTML = `DEF: ${ash.pokemon[i].def}`;
+        }
+
+        for (var i = 0; i < atk.length; i++) {
+          atk[i].innerHTML = ` ATK: ${ash.pokemon[i].atk}`;
+        }
+
+        for (var i = 0; i < abilities.length; i++) {
+          abilities[i].innerHTML = `Abilities: ${ash.pokemon[i].abilties}`;
+        }
     } else
+
     if (document.getElementsByClassName('active')[0].id == 'bruce') {
-      trainerNum = 3;
-    }
-    console.log(trainers);
-    for (var i = 0; i < pokemon.length; i++) {
-      pokemon[i].innerHTML = `${trainers[trainerNum].pokemon[i].name}`;
-    }
 
-    for (var i = 0; i < flavor.length; i++) {
-      flavor[i].innerHTML = `${trainers[trainerNum].pokemon[i].flavorText}`;
-    }
+        for (var i = 0; i < pokemon.length; i++) {
+          pokemon[i].innerHTML = bruce.pokemon[i].name;
+        }
 
-    for (var i = 0; i < hp.length; i++) {
-      hp[i].innerHTML = `${trainers[trainerNum].pokemon[i].hp}`
-    }
+        for (var i = 0; i < flavor.length; i++) {
+          flavor[i].innerHTML = bruce.pokemon[i].flavorText;
+        }
 
-    for (var i = 0; i < def.length; i++) {
-      def[i].innerHTML = `${trainers[trainerNum].pokemon[i].def}`
-    }
+        for (var i = 0; i < hp.length; i++) {
+          hp[i].innerHTML = `HP: ${bruce.pokemon[i].hp}`;
+        }
 
-    for (var i = 0; i < atk.length; i++) {
-      atk[i].innerHTML = `${trainers[trainerNum].pokemon[i].atk}`
-    }
+        for (var i = 0; i < def.length; i++) {
+          def[i].innerHTML = `DEF: ${bruce.pokemon[i].def}`;
+        }
 
-    for (var i = 0; i < abilities.length; i++) {
-      abilities[i].innerHTML = `${trainers[trainerNum].pokemon[i].abilties}`
+        for (var i = 0; i < atk.length; i++) {
+          atk[i].innerHTML = ` ATK: ${bruce.pokemon[i].atk}`;
+        }
+
+        for (var i = 0; i < abilities.length; i++) {
+          abilities[i].innerHTML = `Abilities: ${bruce.pokemon[i].abilties}`;
+        }
     }
 }

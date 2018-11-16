@@ -70,7 +70,7 @@ html {
 
 body {
   height: 100%;
-  background-image: url("../img/background.jpeg");
+  background-image: radial-gradient(transparent, rgba(0, 0, 0, 0.7), black), url("../img/background.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -79,7 +79,7 @@ body {
 }
 
 .carousel-item {
-  background-image: url("../img/interfaceconsole.png");
+  background-image: url("../img/coloredpanel.png");
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;

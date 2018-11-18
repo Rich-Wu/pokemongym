@@ -1,3 +1,29 @@
+.wrapper {
+  position: absolute;
+  overflow: hidden;
+  top: 100px;
+  left:200px;
+  width: 310px;
+  height: 210px;
+  border: none; }
+
+#slide {
+  position: absolute;
+  left: -300px;
+  width: 300px;
+  height: 200px;
+  -webkit-animation: slide 0.5s forwards;
+  -webkit-animation-delay: 2s;
+  animation: slide 0.5s forwards;
+  animation-delay: 2s; }
+
+@-webkit-keyframes slide {
+  100% {
+    left: 0; } }
+@keyframes slide {
+  100% {
+    left: 0; } }
+
 #logo {
   width: 50px;
   height: 50px; }

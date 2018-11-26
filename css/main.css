@@ -64,7 +64,7 @@ section {
   padding: .5em 0; }
 
 .tile:hover .front {
-  top: -200px;
+  top: -100px;
   opacity: 0; }
 
 html {
